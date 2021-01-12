@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>2020 Sucks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class='ion-padding'>
+<ion-list>
+
+
+  <ion-item>
+    <ion-label position='floating'>Reason</ion-label>
+    <ion-input type='text' [(ngModel)]='Reason'></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position='floating'>Price</ion-label>
+    <ion-input type='number' [(ngModel)]='Price'></ion-input>
+  </ion-item>
+
+  
+
+<ion-item>
+  <ion-label position='floating'>Giver</ion-label>
+  <ion-select [(ngModel)]='Giver'>
+    <ion-select-option>Avinash</ion-select-option>
+    <ion-select-option>Suraj</ion-select-option>
+    <ion-select-option>Kishore</ion-select-option>
+    <ion-select-option>Vishnu</ion-select-option>
+    <ion-select-option>Rohith</ion-select-option>
+    <ion-select-option>Neeha</ion-select-option>
+    <ion-select-option>Srinija</ion-select-option>
+    <ion-select-option>Hemanth</ion-select-option>
+    <ion-select-option>Akhila</ion-select-option>
+    <ion-select-option>Pranavi</ion-select-option>
+    <ion-select-option>Surya Tej</ion-select-option>
+    <ion-select-option>Chintu</ion-select-option>  
+  </ion-select>
+
+</ion-item>
+
+
+
+<ion-item>
+  <ion-label position='floating'>Receiver</ion-label>
+  <ion-select multiple =true [(ngModel)]='Receiver'>
+    <ion-select-option>Avinash</ion-select-option>
+    <ion-select-option>Suraj</ion-select-option>
+    <ion-select-option>Kishore</ion-select-option>
+    <ion-select-option>Vishnu</ion-select-option>
+    <ion-select-option>Rohith</ion-select-option>
+    <ion-select-option>Neeha</ion-select-option>
+    <ion-select-option>Srinija</ion-select-option>
+    <ion-select-option>Hemanth</ion-select-option>
+    <ion-select-option>Akhila</ion-select-option>
+    <ion-select-option>Pranavi</ion-select-option>
+    <ion-select-option>Surya Tej</ion-select-option>
+    <ion-select-option>Chintu</ion-select-option>  
+  </ion-select>
+
+</ion-item>
+ 
+</ion-list>
+
+
+
+<ion-button class="ion-margin-vertical" expand='block' (click)='NextPage()' >Next</ion-button>
+
+  
+ 
+    
+
+<ion-item class='pad'>
+  <ion-label position='floating'>Name</ion-label>
+  <ion-select  [(ngModel)]='Name'>
+    <ion-select-option>Avinash</ion-select-option>
+    <ion-select-option>Suraj</ion-select-option>
+    <ion-select-option>Kishore</ion-select-option>
+    <ion-select-option>Vishnu</ion-select-option>
+    <ion-select-option>Rohith</ion-select-option>
+    <ion-select-option>Neeha</ion-select-option>
+    <ion-select-option>Srinija</ion-select-option>
+    <ion-select-option>Hemanth</ion-select-option>
+    <ion-select-option>Akhila</ion-select-option>
+    <ion-select-option>Pranavi</ion-select-option>
+    <ion-select-option>Surya Tej</ion-select-option>
+    <ion-select-option>Chintu</ion-select-option>  
+  </ion-select>
+
+</ion-item>
+
+
+<ion-button class="ion-margin-vertical" expand='block' (click)='Modal()'>Transactions</ion-button>
+  
+
+
+</ion-content>

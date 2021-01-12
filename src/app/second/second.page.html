@@ -1,0 +1,25 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-back-button [defaultHref]="['/','home']"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{Giver}}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class='ion-padding'>
+  <ion-list>
+
+    <ion-item *ngFor='let i of Receiver;let j = index'>
+        <ion-label position='stacked'>{{i}}</ion-label>
+         <ion-input type='number' [(ngModel)]='Amount[j]'></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+
+  <ion-button class='ion-margin-vertical' expand='block' (click)='Done()'>Done</ion-button>
+
+</ion-content>

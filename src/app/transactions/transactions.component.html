@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>{{Name}} Transactions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let tran of Trans">
+    <ion-item-sliding>
+      <ion-item>
+      <div>
+        <ion-label class="ion-margin-top">
+          {{ tran.Reason }}
+        </ion-label>
+        <ion-label class="ion-margin-vertical">{{ tran.Timestamp | date : 'short'}}</ion-label>
+      
+   
+      </div>
+        
+        <ion-chip color="success" *ngIf="tran.Etc === 'Get'" slot="end">{{
+          tran.Amount|number
+        }}</ion-chip>
+        <ion-chip color="danger" *ngIf="tran.Etc === 'Give'" slot="end">{{
+          tran.Amount|number
+        }}</ion-chip>
+        <ion-chip slot="end" color="primary">{{ tran.Name }}</ion-chip>
+      </ion-item>
+
+      <ion-item-options *ngIf="tran.Etc==='Get'" side="end">
+        <ion-item-option (click)='Delete(tran.tranid,tran.Name)' color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-chip color="danger" slot="end"> Give : {{ Give |number}} </ion-chip>
+      <ion-chip color="success" slot="end"> Get : {{ Get|number }} </ion-chip>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>
